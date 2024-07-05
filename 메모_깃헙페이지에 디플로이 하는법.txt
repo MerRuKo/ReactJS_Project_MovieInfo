@@ -18,7 +18,7 @@ ex)
       "last 1 safari version"
     ]
   },
-  "homepage" : "https://merruko.github.io/ReactJS_Study/17_create_react_app/"
+  "homepage": "https://merruko.github.io/ReactJS_Project_MovieInfo"
 }
 
 6. build를 하고 deploy를 해야하는게 귀찮기 때문에 package.json의 "scripts"에 "deploy"와 "predeploy" 속성을 추가한다.
@@ -28,7 +28,7 @@ ex)
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run bulid"
+    "predeploy": "npm run build"
   },
 
 7. predeploy -> build -> deploy
