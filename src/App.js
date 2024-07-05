@@ -1,5 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// BrowserRouter가 아닌 HashRouter로 하면 index URL 앞에 #이 붙는다.
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+// GitHub Pages에서는 기본적으로 BrowserRouter가 제대로 작동하지 않을 수 있습니다.
+// 이는 GitHub Pages가 클라이언트 사이드 라우팅을 처리하지 못하기 때문입니다.
+// 이를 해결하기 위해 HashRouter를 사용하는 것이 일반적입니다.
+// HashRouter는 URL에 해시(#)를 사용하여 라우팅을 처리하므로,
+// GitHub Pages와 같은 정적 사이트 호스팅 서비스에서 잘 작동합니다.
+
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 
