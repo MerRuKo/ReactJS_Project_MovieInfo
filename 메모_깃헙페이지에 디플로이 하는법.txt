@@ -1,0 +1,43 @@
+1. 터미널 킨다
+(C:\Workspace\StudyReactJS\17_create_react_app 같이 깃리포지토리 루트경로에서 하위폴더 만들고 작업한건 깃헙디플로이 안되는 듯)
+(C:\Workspace\에서 npx create-react-app 쳐서 만든 C:\Workspace\movie_info 같은 깃리포지토리 루트경로에서만 할 것.)
+
+2. 깃허브 페이지스에 배포 할 수 있게 해주는 패키지 인스톨
+npm i gh-pages
+
+3. package.json의 bulid 스크립트를 실행하여 코드 압축/최적화를 통해 production ready code를 생성한다
+npm run build
+
+4. build 폴더에 브라우저가 읽을 수 있는 난해한 코드의 js파일들이 생긴 것을 확인한다
+
+5. package.json의 마지막 줄에 가서 마지막 속성에 컴마 쓰고 내 깃허브 페이지 주소값을 가진 "homepage" 속성을 추가한다
+ex)
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage" : "https://merruko.github.io/ReactJS_Study/17_create_react_app/"
+}
+
+6. build를 하고 deploy를 해야하는게 귀찮기 때문에 package.json의 "scripts"에 "deploy"와 "predeploy" 속성을 추가한다.
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run bulid"
+  },
+
+7. predeploy -> build -> deploy
+①　터미널에서 npm run deploy 치고 실행
+②　node.js가 predeploy를 자동으로 먼저 실행 시킴
+③　predeploy는 npm run build를 실행 시킨다.
+④　npm run build는 react-scripts build를 실행시킨다.
+⑤　react-scripts build의 코드 압축이 끝나면 gh-pages -d build가 실행된다.
+   
+8. bulid 폴더를 삭제해보고 위의 동작을 한번 해봐라. 재빌드 돼서 bulid 폴더가 다시 생기고 디플로이 적용된다.
+
+9. "homepage"에 정의했던 URL로 가면 5분 정도 뒤에 페이지 배포 된 거 확인 가능.
