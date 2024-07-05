@@ -1,6 +1,4 @@
 1. 터미널 킨다
-(C:\Workspace\StudyReactJS\17_create_react_app 같이 깃리포지토리 루트경로에서 하위폴더 만들고 작업한건 깃헙디플로이 안되는 듯)
-(C:\Workspace\에서 npx create-react-app 쳐서 만든 C:\Workspace\movie_info 같은 깃리포지토리 루트경로에서만 할 것.)
 
 2. 깃허브 페이지스에 배포 할 수 있게 해주는 패키지 인스톨
 npm i gh-pages
